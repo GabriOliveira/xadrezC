@@ -8,6 +8,7 @@ int main()
     printf("1 para Bispo \n");
     printf("2 para Torre \n");
     printf("3 para Rainha \n");
+    printf("4 para Cavalo \n");
     scanf("%d", &peca);
 
     // Bispo(While)
@@ -41,6 +42,21 @@ int main()
         }
     }
 
-    
+    // Cavalo(Loops aninhados)
+    if (peca == 4)
+    {
+        int v = 1;
+        for (int c = 1; c <= 1; c++)
+        {
+            do
+            {
+                printf("Baixo\n");
+                v++;
+            } while (v == 2);
+
+            printf("Esquerda\n");
+        }
+    }
+
     return 0;
 }
