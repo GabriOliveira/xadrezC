@@ -2,32 +2,29 @@
 // Movimento das peças (quantidade = quantidade de movimentos e unidade = ações que teram e cada quantidade de movimento)
 void bispoMove(int quantidade1)
 { // Movimento do Bispo com recursividade
-    for (int unidade1 = 1; unidade1 <= quantidade1; unidade1++)
-    {
+    if (quantidade1 == 0) return;
         printf("Cima \n");
         printf("Direita \n");
-        printf("FIM DO MOVIMENTO %d \n", unidade1);
-    }
+        bispoMove(quantidade1 -1);
+
+    
 }
 
 void torreMove(int quantidade2)
 { // Movimento da Torre com recursividade
-    for (int unidade2 = 1; unidade2 <= quantidade2; unidade2++)
-    {
+    if (quantidade2 == 0) return;
         printf("Direita  \n");
-        printf("FIM DO MOVIMENTO %d \n", unidade2);
-    }
+    torreMove(quantidade2 - 1);
+    
 }
 
 void rainhaMove(int quantidade3)
 { // Movimento da Rainha com recursividade
-    for (int unidade3 = 1; unidade3 <= quantidade3; unidade3++)
-    {
+    if (quantidade3 == 0) return;
         printf("Esquerda \n");
         printf("Cima \n");
         printf("Direita \n");
-        printf("FIM DO MOVIMENTO %d \n", unidade3);
-    }
+    rainhaMove(quantidade3 - 1);
 }
 
 void cavaloMove(int quantidade4)
